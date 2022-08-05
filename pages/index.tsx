@@ -27,7 +27,7 @@ const Home = ({ sliders, products, listCategory, newsList }: HomeProps) => {
   return (
     <>
       <Head>
-        <title>Tea House</title>
+        <title>Trang chủ - Tea House</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <HomeBanner sliders={sliders} />
