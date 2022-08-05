@@ -49,7 +49,7 @@ export const getStaticProps: GetStaticProps = async (context: GetStaticPropsCont
   const id = context.params?.id as string;
   const cateNews = await get(id);
 
-  const req = await fetch("http://localhost:8080/api/categoryNews");
+  const req = await fetch("https://teahouse-server.herokuapp.com/api/categoryNews");
   const catePost = await req.json();
 
   return {

@@ -82,7 +82,7 @@ const Product = ({ products }: Props) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const res = await fetch("http://localhost:8080/api/product");
+  const res = await fetch("https://teahouse-server.herokuapp.com/api/product");
   const products = await res.json();
 
   return {

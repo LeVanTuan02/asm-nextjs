@@ -39,10 +39,10 @@ const index = ({ posts, catePost }: Props) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const res = await fetch("http://localhost:8080/api/news");
+  const res = await fetch("https://teahouse-server.herokuapp.com/api/news");
   const posts = await res.json();
 
-  const req = await fetch("http://localhost:8080/api/categoryNews");
+  const req = await fetch("https://teahouse-server.herokuapp.com/api/categoryNews");
   const catePost = await req.json();
 
   return {

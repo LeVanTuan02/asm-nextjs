@@ -73,7 +73,7 @@ const MenuPage = ({ cateproduct }: Props) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const res = await fetch("http://localhost:8080/api/cateproduct");
+  const res = await fetch("https://teahouse-server.herokuapp.com/api/cateproduct");
   const cateproduct = await res.json();
 
   return {
