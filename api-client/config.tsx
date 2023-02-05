@@ -8,7 +8,7 @@ const axiosClient = axios.create({
 });
 
 export const axiosServer = axios.create({
-  baseURL: "https://teahouse-server.herokuapp.com/api",
+  baseURL: "https://asm-nextjs-be-production.up.railway.app/api",
   headers: {
     "Content-Type": "application/json",
   },
