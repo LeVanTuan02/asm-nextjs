@@ -82,7 +82,7 @@ const Product = ({ products }: Props) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const res = await fetch("https://asm-nextjs-be-v2.up.railway.app/api/product");
+  const res = await fetch("https://asm-nextjs-be-production.up.railway.app/api/product");
   const products = await res.json();
 
   return {

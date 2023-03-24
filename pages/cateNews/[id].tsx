@@ -49,7 +49,7 @@ export const getStaticProps: GetStaticProps = async (context: GetStaticPropsCont
   const id = context.params?.id as string;
   const cateNews = await get(id);
 
-  const req = await fetch("https://asm-nextjs-be-v2.up.railway.app/api/categoryNews");
+  const req = await fetch("https://asm-nextjs-be-production.up.railway.app/api/categoryNews");
   const catePost = await req.json();
 
   return {

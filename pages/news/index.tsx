@@ -39,10 +39,10 @@ const index = ({ posts, catePost }: Props) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const res = await fetch("https://asm-nextjs-be-v2.up.railway.app/api/news");
+  const res = await fetch("https://asm-nextjs-be-production.up.railway.app/api/news");
   const posts = await res.json();
 
-  const req = await fetch("https://asm-nextjs-be-v2.up.railway.app/api/categoryNews");
+  const req = await fetch("https://asm-nextjs-be-production.up.railway.app/api/categoryNews");
   const catePost = await req.json();
 
   return {
