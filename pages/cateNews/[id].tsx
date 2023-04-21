@@ -5,6 +5,7 @@ import { get, getAll } from "../../api-client/cateNewsApi";
 import { CategoryNews } from "../../models/categoryNews";
 import Sidebar from "../news/Sidebar";
 import News from "../news/News";
+import { API_URL } from "../../constants";
 
 type Props = {
   cateNews: CategoryNews;
@@ -49,7 +50,7 @@ export const getStaticProps: GetStaticProps = async (context: GetStaticPropsCont
   const id = context.params?.id as string;
   const cateNews = await get(id);
 
-  const req = await fetch("https://asm-nextjs-be-production.up.railway.app/api/categoryNews");
+  const req = await fetch(`${API_URL}/categoryNews`);
   const catePost = await req.json();
 
   return {

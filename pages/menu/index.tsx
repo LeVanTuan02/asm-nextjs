@@ -5,6 +5,7 @@ import { CateProduct } from "../../models/cateProduct";
 import { formatCurrency } from "../../utils";
 import Head from "next/head";
 import Link from "next/link";
+import { API_URL } from "../../constants";
 type Props = {
   cateproduct: CateProduct[];
 };
@@ -73,7 +74,7 @@ const MenuPage = ({ cateproduct }: Props) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const res = await fetch("https://asm-nextjs-be-production.up.railway.app/api/cateproduct");
+  const res = await fetch(API_URL + "/cateproduct");
   const cateproduct = await res.json();
 
   return {

@@ -1,14 +1,15 @@
 import axios from "axios";
+import { API_URL } from "../constants";
 
 const axiosClient = axios.create({
-  baseURL: "https://asm-nextjs-be-production.up.railway.app/api",
+  baseURL: API_URL,
   headers: {
     "Content-Type": "application/json",
   },
 });
 
 export const axiosServer = axios.create({
-  baseURL: "https://asm-nextjs-be-production.up.railway.app/api",
+  baseURL: API_URL,
   headers: {
     "Content-Type": "application/json",
   },

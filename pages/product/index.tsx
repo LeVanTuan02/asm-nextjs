@@ -5,6 +5,7 @@ import Link from "next/link";
 import React from "react";
 import { Product } from "../../models/product";
 import { formatCurrency } from "../../utils";
+import { API_URL } from "../../constants";
 type Props = {
   products: Product[];
 };
@@ -82,7 +83,7 @@ const Product = ({ products }: Props) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const res = await fetch("https://asm-nextjs-be-production.up.railway.app/api/product");
+  const res = await fetch(API_URL + "/product");
   const products = await res.json();
 
   return {

@@ -6,6 +6,7 @@ import { GetStaticProps } from "next";
 import { News as TypeNews } from "../../models/news";
 import { CategoryNews } from "../../models/categoryNews";
 import Head from "next/head";
+import { API_URL } from "../../constants";
 type Props = {
   posts: TypeNews[];
   catePost: CategoryNews[];
@@ -39,10 +40,10 @@ const index = ({ posts, catePost }: Props) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const res = await fetch("https://asm-nextjs-be-production.up.railway.app/api/news");
+  const res = await fetch(API_URL + "/news");
   const posts = await res.json();
 
-  const req = await fetch("https://asm-nextjs-be-production.up.railway.app/api/categoryNews");
+  const req = await fetch(API_URL + "/categoryNews");
   const catePost = await req.json();
 
   return {
